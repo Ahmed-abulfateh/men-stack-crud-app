@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details</title>
+</head>
+<body>
+
+<h1><%= foundCar.name %></h1>
+
+    <form action="/cars/delete/<%= foundCar._id %>" method="POST">    
+        <button type="submit">Delete Car</button>
+    </form>
+
+    <a href="/cars/update/<%= foundCar._id %>">Update Car</a>
+</body>
+</html>

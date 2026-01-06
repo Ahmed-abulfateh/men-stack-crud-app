@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars List</title>
+</head>
+<body>
+<h1>Cars List</h1>
+<ul>
+    <% allCars.forEach(function(car){ %>
+        <li>
+            Name: <%= car.name %> - 
+            Ready to Drive: <%= car.isReadyToDrive ? "Ready to Drive" : "Not Ready to Drive" %>
+        </li>        
+        <a href="/cars/<%= car._id %>">View Details</a>
+    <% }) %>
+</ul>
+</body>
+</html>
