@@ -1,13 +1,14 @@
-const { name } = require('ejs');
-const e = require('express');
-const express = require('express') // import the express package
 
+const express = require('express') // import the express package
+const mangoose = require('mongoose')
+const dotenv = require('dotenv')
 
 const app = express() // creates an instance of express Server
 
 
 
-
+app.set('view engine', 'ejs') // set the view engine to ejs
+dotenv.config() // configure dotenv to use .env file
 app.use(express.static('public')) // my app will serve all static files from public folder
 app.use(express.urlencoded({ extended: false }));
 
